@@ -2,7 +2,7 @@
 resource "aws_s3_bucket" "vulnerable_bucket" {
   bucket = "unique-s3-bucket-${random_id.bucket_id.hex}"
 
-  acl    = "public-read" # Vulnerability: Bucket is publicly readable
+  acl    = "public-read" 
 
   versioning {
     enabled = false # Vulnerability: Versioning is not enabled
